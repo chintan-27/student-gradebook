@@ -1,10 +1,10 @@
-# 🧮 Student Gradebook CLI Tool
+# Student Gradebook CLI Tool
 
 This project was built to practice low-level C++ development and toolchain setup before diving into more advanced topics. The goal was to set up a proper C++ dev environment (with `clang++`, `CMake`, sanitizers, and profilers), understand how to use debugging and memory tools, and build a complete CLI utility using modern C++. The tool reads a CSV file of student scores, calculates their averages, and exports the results. Along the way, we used `AddressSanitizer`, LLDB, `sample`, and Instruments on macOS for debugging and profiling.
 
 ---
 
-## 📌 Features
+## Features
 
 - Load student names and scores from a CSV file
 - Compute average scores for each student
@@ -15,7 +15,7 @@ This project was built to practice low-level C++ development and toolchain setup
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 
@@ -85,7 +85,7 @@ sample gradebook -wait 5 -file sample_report.txt
 
 ---
 
-## 📖 License
+## License
 
 MIT
 
