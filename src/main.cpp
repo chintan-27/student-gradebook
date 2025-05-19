@@ -1,5 +1,6 @@
 #include "csv_utils.hpp"
 #include <iostream>
+#include <sstream>
 
 void cleanup(std::vector<Student*>& students) {
     for (auto* student : students) {
@@ -31,7 +32,14 @@ int main(int argc, char* argv[]) {
         std::cout << "4. Export to averages.csv\n";
         std::cout << "5. Exit\n";
         std::cout << "> ";
-        std::cin >> choice;
+
+        std::string input;
+        std::getline(std::cin, input);
+        std::stringstream ss(input);
+        if (!(ss >> choice)) {
+            std::cout << "Invalid input. Please enter a number.\n";
+            continue;
+        }
 
         switch (choice) {
             case 1:
@@ -57,12 +65,14 @@ int main(int argc, char* argv[]) {
             }
 
             case 3: {
+                std::string threshold_input;
                 double threshold;
                 std::cout << "Enter threshold: ";
-                std::cin >> threshold;
-                for (const auto* s : students) {
-                    if (s->average() < threshold)
-                        std::cout << s->getName() << ": " << s->average() << "\n";
+                std::getline(std::cin, threshold_input);
+                std::stringstream ts(threshold_input);
+                if (!(ts >> threshold)) {
+                    std::cout << "Invalid threshold.\n";
+                    continue;
                 }
                 break;
             }

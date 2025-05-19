@@ -4,6 +4,7 @@
 #include <iostream>  // optional for debug
 
 std::vector<Student*> load_students_from_csv(const std::string& filename) {
+    std::cout << "Loading " << filename << std::endl;
     std::vector<Student*> students;
     std::ifstream file(filename);
 
@@ -25,6 +26,7 @@ std::vector<Student*> load_students_from_csv(const std::string& filename) {
         std::getline(ss, token, ',');
         std::string name = token;
 
+        if (token.empty()) continue;
         std::vector<int> scores;
 
         // Get the scores
