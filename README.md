@@ -19,14 +19,15 @@ This project was built to practice low-level C++ development and toolchain setup
 
 ```
 
-StudentGradebook/
-├── CMakeLists.txt
+Student-Gradebook/
 ├── include/
-│   └── student.hpp
+│   ├── student.hpp
+│   └── csv_utils.hpp
 ├── src/
 │   ├── main.cpp
 │   ├── student.cpp
-│   └── csv\_utils.cpp
+│   └── csv_utils.cpp
+├── CMakeLists.txt
 └── README.md
 
 ````

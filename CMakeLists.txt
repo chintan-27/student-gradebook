@@ -12,6 +12,8 @@ set(SOURCES
     src/csv_utils.cpp
 )
 
+include_directories(include)
+
 # Create executable
 add_executable(gradebook ${SOURCES})
 
